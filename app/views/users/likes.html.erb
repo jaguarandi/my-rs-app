@@ -1,0 +1,43 @@
+<div class="main user-show">
+  <div class="container user-container">
+    <div class="user">
+      <img src="<%= "/user_images/#{@user.image_name}" %>">
+      <h2><%= @user.name %></h2>
+      <p><%= @user.email %></p>
+      <% if @user.id == @current_user.id %>
+        <%= link_to("編集", "/users/#{@user.id}/edit") %>
+      <% end %>
+    </div>
+
+    <div class="total-likes">
+      <p>貰ったグッドの総数: <%= @likes_count %><i class="fas fa-thumbs-up"></i></p>
+    </div>
+
+    <%= link_to("/users/#{@user.id}") do %>
+      <input class="btn fas post-btn" type="submit" value="&#xf075; 投稿">
+    <% end %>
+    <%= link_to("/users/#{@user.id}/likes") do %>
+      <input class="btn fas good-btn" type="submit" value="&#xf164; グッド">
+    <% end %>
+
+    <% @likes.each do |like| %>
+      <% post = Post.find_by(id: like.post_id) %>
+      <div class="posts-index-item">
+        <div class="row">
+        <div class="post-left col-3">
+          <img src="<%= "/user_images/#{post.user.image_name}" %>">
+        </div>
+        <div class="post-right col-9">
+          <div class="post-user-name text-left">
+            <%= link_to(post.user.name, "/users/#{post.user.id}", class: "link-user-name") %>
+          </div>
+          <div class="post-user-content text-left">
+            <%= link_to(post.content, "/posts/#{post.id}", class: "link-user-content") %>
+          </div>
+        </div>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>

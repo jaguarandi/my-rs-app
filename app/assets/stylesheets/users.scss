@@ -1,0 +1,110 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//form
+.form {
+  background-color: #FFF;
+  box-shadow: 0 2px 6px #c1ced7;
+  padding: 20px 0 20px;
+}
+
+.form-heading {
+  margin: 10px 0 10px;
+  font-size: 30px;
+}
+
+.form p {
+  margin-bottom: 5px;
+}
+
+input[name="name"] {
+  margin-bottom: 10px;
+}
+
+input[name="email"] {
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  margin-top: 15px;
+}
+
+input[type="file"] {
+  margin: 0 auto;
+}
+
+//login_form
+.users-new {
+  padding-top: 80px;
+}
+
+//index
+.users-index {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.users-index-item {
+  padding: 10px 0px 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 6px #c1ced7;
+  border-radius: 0.3em;
+  background-color: #fff;
+}
+
+.user-left img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  box-shadow: 0 2px 6px #c1ced7;
+  object-fit: cover;
+}
+
+//new
+.users-new {
+  padding-top: 80px;
+}
+
+
+
+//edit
+.users-edit {
+  padding-top: 80px;
+}
+
+.users-edit h1 {
+  font-size: 40px;
+}
+
+//show
+.user-show {
+  padding: 80px 0 80px;
+}
+
+.user img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  box-shadow: 0 2px 6px #c1ced7;
+  margin: 20px 0 10px;
+  object-fit: cover;
+}
+
+.user h2 {
+  margin: 10px 0;
+}
+
+.total-likes {
+  margin: 10px 0 10px;
+}
+
+.post-btn {
+  color: #696969;
+  background-color: #fff;
+}
+
+.good-btn {
+  color: #696969;
+  background-color: #ffd700;
+}
